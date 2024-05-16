@@ -19,9 +19,7 @@ export default function RootLayout({ children }) {
         <NavBar/>
         <CategoryBar/>
         <Container maxWidth='lg' sx={{ mt: 2 }}>
-          <main>
-          {children}
-          </main>
+          <main>{children}</main>
           <Divider sx={{mt: 2}}/>
           <Footer/>
         </Container>

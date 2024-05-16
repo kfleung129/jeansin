@@ -2,7 +2,7 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 export default function Home() {
   return (
     <Container maxWidth='lg'>
-      <Grid container mt={2}>
+      <Grid container mt={2} columnSpacing={4}>
         <Grid item xs={6} md={3}>
           <Typography variant="h6">Contact us</Typography>
           <Box mt={1}>
@@ -27,7 +27,7 @@ export default function Home() {
               <b>Shipping method</b>
             </Typography>
             <Typography variant="subtitle2" gutterBottom>
-              <b>Privacy term</b> 
+              <b>Privacy policy</b> 
             </Typography>
             <Typography variant="subtitle2" gutterBottom>
               <b>Return Policy</b>

@@ -45,7 +45,7 @@ function CategoryBar() {
         >
           {
             categoryList.map((category) => (
-              <Typography size='small' sx={{ '&:hover': { cursor: 'pointer', borderBottom: '1px solid white' } }}>
+              <Typography key={category} size='small' sx={{ '&:hover': { cursor: 'pointer', borderBottom: '1px solid white' } }}>
                 {category}
               </Typography>
             ))

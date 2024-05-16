@@ -20,15 +20,19 @@ import LanguageIcon from '@mui/icons-material/Language';
 import IconButton from '@mui/material/IconButton';
 import MenuList from '@mui/material/MenuList';
 
+const pages = ['Search', 'Shopping cart', 'Personal information'];
+const pagesIcon = {
+  'Search': SearchIcon,
+  'Shopping cart': ShoppingBagIcon,
+  'Personal information': PersonIcon
+}
 
 function NavBar() {
   const [language, setLanguage] = useState('en_US');
   const [openMenu, setOpenMenu] = useState(false);
-  const pages = ['Search', 'Shopping cart', 'Personal information'];
-  const pagesIcon = {
-    'Search': SearchIcon,
-    'Shopping cart': ShoppingBagIcon,
-    'Personal information': PersonIcon
+  const changeLanguage = (newLanguage) => {
+    localStorage.setItem('i18n', newLanguage);
+    setLanguage(newLanguage);
   }
 
   return (
@@ -47,7 +51,7 @@ function NavBar() {
               <Select
                 id="demo-simple-select"
                 value={language}
-                onChange={(e) => setLanguage(e.target.value)}
+                onChange={(e) => changeLanguage(e.target.value)}
                 sx={{
                   fontSize: 12,
                   minWidth: 100
