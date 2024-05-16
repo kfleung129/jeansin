@@ -5,22 +5,23 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import XIcon from '@mui/icons-material/X';
 
 export default function Home() {
+  const fontSize = { xs: 12, md: 14 };
   return (
     <Container maxWidth='lg'>
       <Grid container mt={2} columnSpacing={4}>
         <Grid item xs={6} md={3}>
           <Typography variant="h6">Contact us</Typography>
           <Box mt={1}>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Phone: +852 56128952</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Whatsapp: +852 67618902</b> 
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Email: inquiry@jeansin.hk</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Open hours: 10am - 8pm</b>
             </Typography>
           </Box>
@@ -28,13 +29,13 @@ export default function Home() {
         <Grid item xs={6} md={3}>
           <Typography variant="h6">Customer services</Typography>
           <Box mt={1}>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Shipping method</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Privacy policy</b> 
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Return Policy</b>
             </Typography>
           </Box>
@@ -42,25 +43,25 @@ export default function Home() {
         <Grid item xs={6} md={3}>
           <Typography variant="h6">Payment</Typography>
           <Box mt={1}>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Cash</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Visa</b> 
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Mastercard</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Payme</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Apple Pay</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>FPS</b>
             </Typography>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>Alipay</b>
             </Typography>
           </Box>
@@ -68,7 +69,7 @@ export default function Home() {
         <Grid item xs={6} md={3}>
           <Typography variant="h6">Location</Typography>
           <Box mt={1}>
-            <Typography variant="subtitle2" gutterBottom>
+            <Typography fontSize={fontSize} gutterBottom>
               <b>
               SHOP 5, 12/F, KCP, KOWLOON CITY, HONG KONG
               </b>
