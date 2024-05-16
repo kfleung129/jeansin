@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -63,21 +64,19 @@ export default function NavBar() {
             </FormControl>
           </Box>
 
-          <Box display='flex' alignItems='center' gap={0.5}>
-            <AdbIcon/>
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              sx={{
-                mr: 5,
-                fontWeight: 700,
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              Jeansin
-            </Typography>
+          <Box display={{ xs: 'none', md: 'flex' }} alignItems='center' gap={0.5}>
+            <Image
+              src="/jeansin_vertical.png"
+              width={80}
+              height={80}
+            />
+          </Box>
+          <Box display={{ xs: 'flex', md: 'none' }} alignItems='center' gap={0.5}>
+            <Image
+              src="/jeansin_horizontal.png"
+              width={60 * 2.846}
+              height={60}
+            />
           </Box>
 
           <Box display={{ xs: 'none', md: 'flex' }} alignItems='center' gap={1.5}>

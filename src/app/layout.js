@@ -15,6 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" type="image/png" sizes="32x32" href="/jeansin_logo.png" />
       <body className={m_plus_rounded.className} suppressHydrationWarning={true}>
         <NavBar/>
         <CategoryBar/>
