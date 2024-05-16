@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -27,7 +27,7 @@ const pagesIcon = {
   'Personal information': PersonIcon
 }
 
-function NavBar() {
+export default function NavBar() {
   const [language, setLanguage] = useState('en_US');
   const [openMenu, setOpenMenu] = useState(false);
   const changeLanguage = (newLanguage) => {
@@ -137,4 +137,3 @@ function NavBar() {
     </AppBar>
   );
 }
-export default NavBar;

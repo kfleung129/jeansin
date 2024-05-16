@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -23,6 +23,15 @@ import MenuList from '@mui/material/MenuList';
 
 
 function CategoryBar() {
+  // const [categoryList, setCategoryList] = useState([]);
+  // useEffect(() => {
+  //   const fetchCategory = async () => {
+  //     const res = await fetch('/api/category');
+  //     const categoryList = res.result;
+  //     console.log(categoryList);
+  //     setCategoryList(categoryList);
+  //   }
+  // }, []);
   const categoryList = [
     'Home',
     'Clothing',

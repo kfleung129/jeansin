@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={m_plus_rounded.className}>
+      <body className={m_plus_rounded.className} suppressHydrationWarning={true}>
         <NavBar/>
         <CategoryBar/>
         <Container maxWidth='lg' sx={{ mt: 2, pb: 4 }}>

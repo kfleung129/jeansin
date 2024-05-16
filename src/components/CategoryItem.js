@@ -12,7 +12,8 @@ export default function CategoryItem(props) {
               src={src}
               alt="item_pic"
               layout='fill'
-              objectFit='contain'
+              sizes='100%'
+              style={{ objectFit:'contain' }}
             />
           </div>
         </Box>

@@ -15,6 +15,7 @@
     "@mui/material": "^5.15.17",
     "i18next": "^23.11.4",
     "next": "14.2.3",
+    "pocketbase": "^0.21.2",
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^14.1.1"
