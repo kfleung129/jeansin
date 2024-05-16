@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={m_plus_rounded.className}>
         <NavBar/>
         <CategoryBar/>
-        <Container maxWidth='lg' sx={{ mt: 2 }}>
+        <Container maxWidth='lg' sx={{ mt: 2, pb: 4 }}>
           <main>{children}</main>
           <Divider sx={{mt: 2}}/>
           <Footer/>

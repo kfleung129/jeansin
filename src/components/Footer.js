@@ -1,4 +1,9 @@
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, IconButton } from "@mui/material";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import XIcon from '@mui/icons-material/X';
+
 export default function Home() {
   return (
     <Container maxWidth='lg'>
@@ -71,9 +76,12 @@ export default function Home() {
           </Box>
         </Grid>
       </Grid>
-      {/* <Box className="socialMedia">
-        Social Media
-      </Box> */}
+      <Box className="socialMedia" display='flex' justifyContent={{ xs: 'center', md: 'flex-start' }} mt={2} gap={0.5}>
+        <IconButton><InstagramIcon/></IconButton>
+        <IconButton><FacebookIcon/></IconButton>
+        <IconButton><WhatsAppIcon/></IconButton>
+        <IconButton><XIcon/></IconButton>
+      </Box>
     </Container>
   );
 }
