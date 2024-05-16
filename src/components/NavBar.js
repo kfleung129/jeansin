@@ -22,7 +22,7 @@ import MenuList from '@mui/material/MenuList';
 
 
 function NavBar() {
-  const [language, setLanguage] = useState('zh_HK');
+  const [language, setLanguage] = useState('en_US');
   const [openMenu, setOpenMenu] = useState(false);
   const pages = ['Search', 'Shopping cart', 'Personal information'];
   const pagesIcon = {
@@ -32,7 +32,7 @@ function NavBar() {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color='transparent' sx={{ padding: { sx: 0, md: 2 } }}>
       <Container maxWidth="xl">
         <Toolbar 
           disableGutters
@@ -50,7 +50,7 @@ function NavBar() {
                 onChange={(e) => setLanguage(e.target.value)}
                 sx={{
                   fontSize: 12,
-                  color: 'white',
+                  minWidth: 100
                 }}
               >
                 <MenuItem value={'en_US'}>English</MenuItem>
@@ -62,7 +62,7 @@ function NavBar() {
           <Box display='flex' alignItems='center' gap={0.5}>
             <AdbIcon/>
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               component="a"
               sx={{
@@ -76,7 +76,7 @@ function NavBar() {
             </Typography>
           </Box>
 
-          <Box display={{ xs: 'none', md: 'flex' }} alignItems='center' gap={2}>
+          <Box display={{ xs: 'none', md: 'flex' }} alignItems='center' gap={1.5}>
             <Tooltip title="Search">
               <IconButton color="inherit"><SearchIcon/></IconButton>
             </Tooltip>
@@ -103,7 +103,7 @@ function NavBar() {
               id="menu-appbar"
               anchorEl={openMenu}
               anchorOrigin={{
-                vertical: 'bottom',
+                vertical: 'top',
                 horizontal: 'right',
               }}
               keepMounted
@@ -111,6 +111,7 @@ function NavBar() {
               onClose={() => setOpenMenu(false)}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                marginTop: 4
               }}
             >
               {

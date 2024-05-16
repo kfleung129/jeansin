@@ -1,6 +1,8 @@
 import NavBar from "@/components/NavBar";
 import CategoryBar from "@/components/CategoryBar";
+import Footer from "@/components/Footer";
 import { M_PLUS_Rounded_1c } from "next/font/google";
+import { Container, Divider } from "@mui/material";
 import "./globals.css";
 
 const m_plus_rounded = M_PLUS_Rounded_1c({ subsets: ["latin"], weight: ['100', '300', '400', '500'] });
@@ -16,7 +18,13 @@ export default function RootLayout({ children }) {
       <body className={m_plus_rounded.className}>
         <NavBar/>
         <CategoryBar/>
-        {children}
+        <Container maxWidth='lg' sx={{ mt: 2 }}>
+          <main>
+          {children}
+          </main>
+          <Divider sx={{mt: 2}}/>
+          <Footer/>
+        </Container>
       </body>
     </html>
   );
