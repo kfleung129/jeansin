@@ -8,7 +8,7 @@ export default function Home() {
   const fontSize = { xs: 12, md: 14 };
   return (
     <Container maxWidth='lg'>
-      <Grid container mt={2} columnSpacing={4}>
+      <Grid container mt={1} columnSpacing={4} rowSpacing={2}>
         <Grid item xs={6} md={3}>
           <Typography variant="h6">Contact us</Typography>
           <Box mt={1}>
