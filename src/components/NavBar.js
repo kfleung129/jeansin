@@ -1,25 +1,13 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import { AppBar, Box, Container, Toolbar, Tooltip, Typography, Menu, MenuItem, FormControl, Select } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
-import { FormControl, InputLabel, Select, ListItemIcon, ListItemText } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import IconButton from '@mui/material/IconButton';
-import MenuList from '@mui/material/MenuList';
 
 const pages = ['Search', 'Shopping cart', 'Personal information'];
 const pagesIcon = {
@@ -35,7 +23,7 @@ export default function NavBar() {
     localStorage.setItem('i18n', newLanguage);
     setLanguage(newLanguage);
   }
-
+  
   return (
     <AppBar position="static" color='transparent' sx={{ padding: { sx: 0, md: 2 } }}>
       <Container maxWidth="xl">
@@ -69,6 +57,7 @@ export default function NavBar() {
               src="/jeansin_vertical.png"
               width={80}
               height={80}
+              alt="logo"
             />
           </Box>
           <Box display={{ xs: 'flex', md: 'none' }} alignItems='center' gap={0.5}>
@@ -76,6 +65,7 @@ export default function NavBar() {
               src="/jeansin_horizontal.png"
               width={60 * 2.846}
               height={60}
+              alt="logo"
             />
           </Box>
 

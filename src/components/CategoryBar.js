@@ -1,46 +1,19 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
-import { FormControl, InputLabel, Select, ListItemIcon, ListItemText } from '@mui/material';
-import LanguageIcon from '@mui/icons-material/Language';
-import IconButton from '@mui/material/IconButton';
-import MenuList from '@mui/material/MenuList';
-
+import NextLink from 'next/link';
+import { AppBar, Toolbar, Container, Typography, Link as MuiLink } from '@mui/material';
+import { getCategoryList } from '@/util/util';
 
 function CategoryBar() {
-  // const [categoryList, setCategoryList] = useState([]);
-  // useEffect(() => {
-  //   const fetchCategory = async () => {
-  //     const res = await fetch('/api/category');
-  //     const categoryList = res.result;
-  //     console.log(categoryList);
-  //     setCategoryList(categoryList);
-  //   }
-  // }, []);
-  const categoryList = [
-    'Home',
-    'Clothing',
-    'Brand',
-    'Sneakers',
-    'Accessories',
-    'Jeans',
-    'On sales'
-  ]
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const categoryList = await getCategoryList();
+      setCategory(categoryList);
+    }
+    fetchCategory();
+  }, []);
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -53,10 +26,10 @@ function CategoryBar() {
           }}
         >
           {
-            categoryList.map((category) => (
-              <Typography key={category} size='small' sx={{ '&:hover': { cursor: 'pointer', borderBottom: '1px solid white' } }}>
-                {category}
-              </Typography>
+            category.map((categoryItem) => (
+              <MuiLink key={categoryItem.id} component={NextLink} href={categoryItem.href} sx={{ color:'white' }}>
+                {categoryItem.name}
+              </MuiLink>
             ))
           }
         </Toolbar>
